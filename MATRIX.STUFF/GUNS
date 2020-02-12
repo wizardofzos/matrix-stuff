@@ -1,0 +1,85 @@
+/* THIS IS A MEMBER IN A PDS. IT'S REXX SOURCE CODE */                  00010000
+/* ------------------------------------------------ */                  00020000
+/*                                                - */                  00020100
+/* - Function: - Load the initial Construct       - */                  00020200
+                                                                        00020300
+/* ------------------------------------------------ */                  00020400
+                                                                        00020500
+                        /* Add your own template    */                  00020600
+control_dataset   =     "MATRIX.TEMPLATE"                               00020700
+construct_version =     "0.0.1"                                         00020800
+                        /*                          */                  00020900
+                                                                        00021000
+                                                                        00022000
+                                                                        00023000
+validCheck1 = validate_code('checkmycode')                              00024000
+say "Accesscode #001:   "validCheck1                                    00025000
+validCheck2 = validate_code('secretcode002')                            00026000
+say "Accesscode #002:   "validCheck2                                    00027000
+validCheck3 = validate_code('checkcode')                                00028000
+say "Accesscode #003:   "validCheck3                                    00029000
+                                                                        00030000
+say "                                            "                      00040000
+say "                 $$ $$$$$ $$                "                      00040100
+say "                 $$ $$$$$ $$                "                      00040200
+say "                .$$ $$$$$ $$.               "                      00040300
+say "                :$$ $$$$$ $$:               "                      00040400
+say "                $$$ $$$$$ $$$               "                      00040500
+say "                $$$ $$$$$ $$$               "                      00040600
+say "               ,$$$ $$$$$ $$$.              "                      00040700
+say "              ,$$$$ $$$$$ $$$$.             "                      00040800
+say "             ,$$$$; $$$$$ :$$$$.            "                      00040900
+say "            ,$$$$$  $$$$$  $$$$$.           "                      00041000
+say "          ,$$$$$$'  $$$$$  `$$$$$$.         "                      00041100
+say "        ,$$$$$$$'   $$$$$   `$$$$$$$.       "                      00041200
+say "     ,s$$$$$$$'     $$$$$     `$$$$$$$s.    "                      00041300
+say "   $$$$$$$$$'       $$$$$       `$$$$$$$$$  "                      00041400
+say "   $$$$$Y'          $$$$$          `Y$$$$$  "                      00041500
+say "                                            "                      00041600
+say "                                            "                      00041700
+say "                                            "                      00041800
+say "                 [wizard2020]               "                      00041900
+say "           Initial Construct Loaded         "                      00042000
+say "        (yes the Matrix runs on Atari)      "                      00042100
+say "                                            "                      00042200
+                                                                        00042300
+if validCheck2 = "Valid" then do                                        00042400
+  say "Code 2 turns out to be OK!, let's get some guns"                 00042500
+end                                                                     00042600
+                                                                        00042800
+say "   $$$$$Y'          $$$$$          `Y$$$$$  "                      00042900
+say "   $$$$$$$$$'       $$$$$       `$$$$$$$$$  "                      00043000
+say "     ,s$$$$$$$'     $$$$$     `$$$$$$$s.    "                      00044000
+say "        ,$$$$$$$'   $$$$$   `$$$$$$$.       "                      00045000
+say "          ,$$$$$$'  $$$$$  `$$$$$$.         "                      00046000
+say "            ,$$$$$  $$$$$  $$$$$.           "                      00047000
+say "             ,$$$$; $$$$$ :$$$$.            "                      00048000
+say "              ,$$$$ $$$$$ $$$$.             "                      00049000
+say "               ,$$$ $$$$$ $$$.              "                      00050000
+say "                $$$ $$$$$ $$$               "                      00051000
+say "                $$$ $$$$$ $$$               "                      00051100
+say "                :$$ $$$$$ $$:               "                      00051200
+say "                .$$ $$$$$ $$.               "                      00051300
+say "                 $$ $$$$$ $$                "                      00051400
+say "                 $$ $$$$$ $$                "                      00051500
+say "                                            "                      00051600
+say "               Construct Ended              "                      00051700
+exit                                                                    00051800
+                                                                        00051900
+/* Inner Matrix Code :) */                                              00052000
+validate_code:                                                          00053000
+  parse arg code_to_check                                               00054000
+  zion_access_code1 =     'secretcode001'                               00055000
+  zion_access_code2 =     'secretcode002'                               00056000
+  zion_access_code3 =     'secretcode003'                               00057000
+  res = 'Invalid'                                                       00058000
+  if code_to_check = zion_access_code1 then do                          00059000
+    res = "Valid"                                                       00060000
+  end                                                                   00070000
+  if code_to_check = zion_access_code2 then do                          00080000
+    res = "Valid"                                                       00090000
+  end                                                                   00100000
+  if code_to_check = zion_access_code3 then do                          00110000
+    res = "Valid"                                                       00111000
+  end                                                                   00112000
+  return res                                                            00113000
