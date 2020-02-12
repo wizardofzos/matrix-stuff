@@ -1,0 +1,37 @@
+/* THIS IS A MEMBER IN A PDS. IT'S REXX SOURCE CODE */                  00010000
+/* ------------------------------------------------ */                  00020002
+/*                                                - */                  00020102
+/* - Function: - Load the initial Construct       - */                  00020202
+                                                                        00020302
+/* ------------------------------------------------ */                  00021002
+                                                                        00030000
+                        /* Add your own template    */                  00031103
+control_dataset   =     "MATRIX.TEMPLATE"                               00032002
+construct_version =     "0.0.1"                                         00032103
+                        /*                          */                  00032203
+                                                                        00033002
+zion_access_code1 =     'secretcode001'                                 00033103
+zion_access_code2 =     'secretcode002'                                 00033203
+zion_access_code3 =     'secretcode003'                                 00033303
+                                                                        00033403
+                                                                        00033503
+validCheck = validate_code(zion_access_code1)                           00033603
+say "Accesscode #001:   "validCheck                                     00033703
+                                                                        00033803
+"ALLOC DA('"control_dataset"') F(MTXCDS) SHR"                           00034002
+"EXECIO * DISKR MTXCDS (STEM cds."                                      00035002
+do i = 1 to cds.0                                                       00036002
+  say cds.i                                                             00036202
+end                                                                     00037002
+say "Construct Loaded"                                                  00040000
+                                                                        00050003
+exit                                                                    00060003
+                                                                        00070003
+/* Inner Matrix Code :) */                                              00080003
+validate_code:                                                          00090003
+  parse arg code_to_check                                               00100003
+  res = 'Invalid'                                                       00101003
+  if code_to_check = zion_access_code1 then do                          00110003
+    res = "Valid"                                                       00111003
+  end                                                                   00120003
+  return res                                                            00130003
