@@ -1,0 +1,4 @@
+/* REXX */                                                              00010000
+                                                                        00020000
+cds = "MATRIX.TEMPLATE"                                                 00021000
+"ALLOC DA('"cds"') NEW SPACE(10,25) DSORG(PS) RECFM(F,B) lrecl(80)"     00030000
