@@ -1,0 +1,54 @@
+/* THIS IS A MEMBER IN A PDS. IT'S REXX SOURCE CODE */                  00010000
+/* ------------------------------------------------ */                  00020000
+/*                                                - */                  00020100
+/* - Function: - Unallocate Someone               - */                  00020208
+                                                                        00020300
+/* ------------------------------------------------ */                  00020400
+                                                                        00020500
+                                                                        00021000
+/* Enter your terminal ID here */                                       00022000
+terminal = 'TCP00021'                                                   00023009
+                                                                        00024000
+                                                                        00024101
+/* Uber code made by Tank */                                            00024208
+                                                                        00025200
+ascb_ptr  = c2x(storage(d2x(x2d("224")),4))                             00025300
+asxb_ptr  = c2x(storage(d2x(x2d(ascb_ptr) + x2d("6c")),4))              00025400
+acee_ptr  = c2x(storage(d2x(x2d(asxb_ptr) + x2d("c8")),4))              00025500
+acee_trid = storage(d2x(x2d(acee_ptr) + x2d("40")),8)                   00026200
+acee_t    = c2x(acee_trid)                                              00026300
+                                                                        00028000
+say "                                            "                      00040000
+say "                                            "                      00040101
+say "                                            "                      00040201
+say "                                            "                      00040301
+say "                 $$ $$$$$ $$                "                      00040401
+say "                 $$ $$$$$ $$                "                      00040501
+say "                .$$ $$$$$ $$.               "                      00040601
+say "                :$$ $$$$$ $$:               "                      00040701
+say "                $$$ $$$$$ $$$               "                      00040801
+say "                $$$ $$$$$ $$$               "                      00040901
+say "               ,$$$ $$$$$ $$$.              "                      00041001
+say "              ,$$$$ $$$$$ $$$$.             "                      00041101
+say "             ,$$$$; $$$$$ :$$$$.            "                      00041201
+say "            ,$$$$$  $$$$$  $$$$$.           "                      00041301
+say "          ,$$$$$$'  $$$$$  `$$$$$$.         "                      00041401
+say "        ,$$$$$$$'   $$$$$   `$$$$$$$.       "                      00041501
+say "     ,s$$$$$$$'     $$$$$     `$$$$$$$s.    "                      00041601
+say "   $$$$$$$$$'       $$$$$       `$$$$$$$$$  "                      00041701
+say "   $$$$$Y'          $$$$$          `Y$$$$$  "                      00041801
+say "                                            "                      00041901
+say "                                            "                      00042001
+say "                                            "                      00042101
+say "                 [wizard2020]               "                      00042201
+say "           Initial Construct Loaded         "                      00042301
+say "        (yes the Matrix runs on Atari)      "                      00042401
+say "                                            "                      00042501
+                                                                        00042601
+if acee_t = c2x(terminal) then do;                                      00042703
+  say "You've freed Morpheus!!!!!!!!!!"                                 00042808
+  say "Your well-deserved flag is:"                                     00042903
+  say x2c('D3C5E3E2D2C9D3D3C1C7C5D5E3E2D4C9E3C8')                       00043005
+end                                                                     00043103
+exit                                                                    00051700
+                                                                        00051800
